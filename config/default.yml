@@ -1,0 +1,6 @@
+Minitest/VariableAsActualArgument:
+  Description: 'This cop enforces correct order of `expected` and `actual` arguments for `assert_equal`.'
+  Enabled: false
+  VersionAdded: '0.1.0'
+
+
