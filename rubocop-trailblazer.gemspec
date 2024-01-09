@@ -19,6 +19,7 @@ Gem::Specification.new do |spec|
   spec.metadata['changelog_uri'] = 'https://github.com/seuros/rubocop-trailblazer/blob/master/CHANGELOG.md'
 
   spec.files = Dir.glob('{lib,config}/**/*', File::FNM_DOTMATCH)
+  spec.files += %w[LICENSE.txt README.md]
   spec.require_paths = ['lib']
 
   spec.metadata['rubygems_mfa_required'] = 'true'

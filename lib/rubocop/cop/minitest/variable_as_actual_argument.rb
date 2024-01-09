@@ -3,8 +3,8 @@
 module RuboCop
   module Cop
     module Minitest
-      # Checks for `assert_equal` method calls where the actual
-      # argument is a variable and the expected argument is a literal.
+      # Checks for `assert_equal` method calls where the first argument is a actual variable,
+      # and the second argument is an expected literal.
       #
       # @example
       #   # bad
@@ -14,7 +14,9 @@ module RuboCop
       #   assert_equal my_var, 3
       class VariableAsActualArgument < LiteralAsActualArgument
         MSG = 'Replace the literal with the second argument.'
-
+        def self.autocorrect_incompatible_with
+          [LiteralAsActualArgument]
+        end
         def on_send(node)
           return unless node.method?(:assert_equal)
 

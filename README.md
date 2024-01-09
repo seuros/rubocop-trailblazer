@@ -1,33 +1,52 @@
 # Rubocop::Trailblazer
 
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rubocop/trailblazer`. To experiment with that code, run `bin/console` for an interactive prompt.
+`Rubocop::Trailblazer` is a Ruby gem that provides additional RuboCop rules that are specifically useful for enforcing best practices and coding styles within projects using the [Trailblazer](http://trailblazer.to/) architecture.
 
 ## Installation
 
-Just install the `rubocop-traiblazer` gem
+Install `rubocop-trailblazer` gem via the following command:
 
 ```sh
-$ gem install rubocop-traiblazer
+$ gem install rubocop-trailblazer
 ```
 
-or if you use inside a project put this in your `Gemfile` or `gems.rb`
-
+If you are using this gem within a project, add the following line in your `Gemfile` or `gems.rb` under the development and test groups:
 ```ruby
-group :development, :test do
-  gem 'rubocop-traiblazer', require: false
+group :development, :test do 
+  gem 'rubocop-trailblazer', require: false 
 end
 ```
+Then run `bundle install` to install the gem.
 
 ## Usage
 
-TODO: Write usage instructions here
+Instruct RuboCop to load the `Rubocop::Trailblazer` extension. Specify this in your `.rubocop.yml`:
+```yaml 
+require:
+  rubocop-other-extension
+  rubocop-trailblazer
+```
 
+Alternatively, you can specify this in the command line:
+```sh
+$ rubocop --require rubocop-trailblazer
+```
+
+Or in a Rake task:
+```ruby
+require 'rubocop/rake_task'
+
+RuboCop::RakeTask.new do |task|
+  task.requires << 'rubocop-trailblazer'
+end
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/seuros/rubocop-trailblazer.
+We welcome contributions! For bug reports, feature requests, and pull requests, please feel free to visit our GitHub at https://github.com/seuros/rubocop-trailblazer.
+
+When submitting a pull request, please ensure your changes are on a separate branch specific to the feature or issue. All updates should include tests.
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+This gem is open-source, available under the terms of the [MIT License](https://opensource.org/licenses/MIT).
