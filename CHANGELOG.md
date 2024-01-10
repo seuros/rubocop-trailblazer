@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/seuros/rubocop-trailblazer/compare/v0.1.1...v0.1.2) (2024-01-10)
+
+
+### Bug Fixes
+
+* resolve conflict with Minitest/LiteralAsActualArgument ([4124624](https://github.com/seuros/rubocop-trailblazer/commit/412462474ab8e15ffa77ec251baf140de64f6126))
+
 ## [0.1.1](https://github.com/seuros/rubocop-trailblazer/compare/v0.1.0...v0.1.1) (2024-01-09)
 
 
